@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>e5a6e477-8753-4c42-bfb1-186dd85e82e0</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RummyAi.Application.Contract\RummyAi.Application.Contract.csproj" />
+    <ProjectReference Include="..\RummyAi.Application\RummyAi.Application.csproj" />
+    <ProjectReference Include="..\RummyAi.Domain\RummyAi.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+@RummyAi.WebApi_HostAddress = http://localhost:5049
+
+GET {{RummyAi.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

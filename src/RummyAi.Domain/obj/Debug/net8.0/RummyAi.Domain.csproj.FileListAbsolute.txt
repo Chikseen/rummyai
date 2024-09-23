@@ -1,0 +1,12 @@
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\obj\Debug\net8.0\RummyAi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\obj\Debug\net8.0\RummyAi.Domain.AssemblyInfoInputs.cache
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\obj\Debug\net8.0\RummyAi.Domain.AssemblyInfo.cs
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\obj\Debug\net8.0\RummyAi.Domain.csproj.CoreCompileInputs.cache
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\obj\Debug\net8.0\RummyAi.Domain.sourcelink.json
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\bin\Debug\net8.0\RummyAi.Domain.deps.json
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\bin\Debug\net8.0\RummyAi.Domain.dll
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\bin\Debug\net8.0\RummyAi.Domain.pdb
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\obj\Debug\net8.0\RummyAi.Domain.dll
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\obj\Debug\net8.0\refint\RummyAi.Domain.dll
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\obj\Debug\net8.0\RummyAi.Domain.pdb
+I:\_User\Desktop\rummyai\src\RummyAi.Domain\obj\Debug\net8.0\ref\RummyAi.Domain.dll
