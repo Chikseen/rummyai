@@ -1,6 +1,8 @@
-﻿namespace RummyAi.Application.Contract.Features.Board;
+﻿using RummyAi.Domain.Features.Deck;
+
+namespace RummyAi.Application.Contract.Features.Board;
 
 public interface IGenerateDeckService
 {
-    void Random();
+    Stack GenerateRandom();
 }

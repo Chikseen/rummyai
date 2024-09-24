@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using RummyAi.Application.Contract.Features.Board;
+using RummyAi.Domain.Features.Deck;
 
 namespace RummyAi.WebApi.Controllers;
 
@@ -11,8 +12,8 @@ public class TempDebugController(
 {
 
     [HttpGet()]
-    public void Get()
+    public Stack Get()
     {
-        generateBoard.Random();
+        return generateBoard.GenerateRandom();
     }
 }

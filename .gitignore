@@ -1,3 +1,10 @@
+# Dev Env
+.vs/
+
+# DotNet
+bin/
+obj/
+
 # Logs
 logs
 *.log
