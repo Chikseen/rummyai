@@ -1,4 +1,4 @@
-﻿namespace RummyAi.Application.Contract.Features.RandomProvider;
+﻿namespace RummyAi.Application.Contract.Features.RandomContract;
 
 public interface IRandomService
 {

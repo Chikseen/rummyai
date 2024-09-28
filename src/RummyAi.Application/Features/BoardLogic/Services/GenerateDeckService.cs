@@ -1,12 +1,13 @@
 ﻿using Microsoft.Extensions.Options;
-using RummyAi.Application.Contract.Features.Board;
-using RummyAi.Application.Contract.Features.RandomProvider;
+using RummyAi.Application.Contract.Features.BoardContract;
+using RummyAi.Application.Contract.Features.RandomContract;
 using RummyAi.Application.Extensions.StackProvider;
 using RummyAi.Domain.Features;
-using RummyAi.Domain.Features.Cards;
-using RummyAi.Domain.Features.Deck;
+using RummyAi.Domain.Features.CardDto.Enum;
+using RummyAi.Domain.Features.CardDto.Models;
+using RummyAi.Domain.Features.DeckDto.Models;
 
-namespace RummyAi.Application.Features.Board;
+namespace RummyAi.Application.Features.BoardLogic.Services;
 
 public class GenerateDeckService(
         IRandomService randomService,

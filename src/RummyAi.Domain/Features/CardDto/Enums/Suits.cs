@@ -1,4 +1,4 @@
-﻿namespace RummyAi.Domain.Features.Cards;
+﻿namespace RummyAi.Domain.Features.CardDto.Models;
 
 public enum Suits
 {

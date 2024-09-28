@@ -1,4 +1,4 @@
-﻿using RummyAi.Domain.Features.Deck;
+﻿using RummyAi.Domain.Features.DeckDto.Models;
 
 namespace RummyAi.Application.Extensions.StackProvider;
 

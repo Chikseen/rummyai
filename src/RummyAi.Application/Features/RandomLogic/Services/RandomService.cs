@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Options;
-using RummyAi.Application.Contract.Features.RandomProvider;
+using RummyAi.Application.Contract.Features.RandomContract;
 using RummyAi.Domain.Features;
 
-namespace RummyAi.Application.Features.RandomProvider;
+namespace RummyAi.Application.Features.RandomLogic.Services;
 
-public class SeedService(
+public class RandomService(
         IOptions<ConfigurationOptions> options
     ) : IRandomService
 {
