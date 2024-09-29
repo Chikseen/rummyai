@@ -9,6 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplication();
+builder.Services.AddFilter();
 builder.Services.AddOption();
 
 WebApplication app = builder.Build();

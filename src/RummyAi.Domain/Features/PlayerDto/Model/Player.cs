@@ -1,5 +1,6 @@
 ﻿using RummyAi.Domain.Features.GameDto;
 using RummyAi.Domain.Features.PlayerDto.Enum;
+using System.Text.Json.Serialization;
 
 namespace RummyAi.Domain.Features.PlayerDto.Model;
 
@@ -13,4 +14,8 @@ public class Player
         PlayerId = id;
         PlayerType = playerType;
     }
+
+    [JsonConstructor]
+    public Player()
+    { }
 }

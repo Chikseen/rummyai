@@ -8,4 +8,5 @@ public interface IGameService
     Game GetGame(GameId gameId);
     Game AddPlayer(GameId gameId, PlayerId playerId);
     Game StartGame(GameId gameId);
+    Game MakeTurn(GameId gameId, PlayerId playerId, Move move);
 }
