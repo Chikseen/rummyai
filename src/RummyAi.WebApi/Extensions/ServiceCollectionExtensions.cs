@@ -24,6 +24,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IGameGetService, GameGetService>();
         services.AddScoped<IGameService, GameService>();
         services.AddScoped<IGameStartService, GameStartService>();
+        services.AddScoped<IGameMoveService, GameMoveService>();
 
         // Rules
         services.AddScoped<IRuleService, RuleService>();

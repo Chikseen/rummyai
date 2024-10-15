@@ -5,5 +5,6 @@ public enum GameState
     Init,
     PlayerSearch,
     Running,
+    WaitingForMove,
     Finished
 }

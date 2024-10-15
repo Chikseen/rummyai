@@ -17,5 +17,8 @@ public class Player
 
     [JsonConstructor]
     public Player()
-    { }
+    {
+        PlayerId = new(Guid.NewGuid());
+        PlayerType = PlayerType.Ai;
+    }
 }

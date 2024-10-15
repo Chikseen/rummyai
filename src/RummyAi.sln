@@ -11,6 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RummyAi.WebApi", "RummyAi.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RummyAi.Application.Contract", "RummyAi.Application.Contract\RummyAi.Application.Contract.csproj", "{0B9D6005-12D7-46F7-9570-C0967EA79300}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34B3E7D3-9ADF-46B8-A17D-A439DB749461}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RummyAi.Ml.Trainer", "RummyAi.Ml.Trainer\RummyAi.Ml.Trainer.csproj", "{69C3CCBB-DD1D-48AB-8FC1-9BA746E386C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +40,10 @@ Global
 		{0B9D6005-12D7-46F7-9570-C0967EA79300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B9D6005-12D7-46F7-9570-C0967EA79300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B9D6005-12D7-46F7-9570-C0967EA79300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C3CCBB-DD1D-48AB-8FC1-9BA746E386C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C3CCBB-DD1D-48AB-8FC1-9BA746E386C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C3CCBB-DD1D-48AB-8FC1-9BA746E386C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C3CCBB-DD1D-48AB-8FC1-9BA746E386C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

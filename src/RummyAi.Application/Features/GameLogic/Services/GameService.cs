@@ -1,5 +1,4 @@
 ﻿using RummyAi.Application.Contract.Features.GameContract;
-using RummyAi.Application.Contract.Features.RuleLogic;
 using RummyAi.Domain.Features.GameDto;
 using RummyAi.Domain.Features.GameDto.Models;
 
@@ -9,7 +8,7 @@ public class GameService(
     IGameGetService gameGetService,
     IGameAddPlayerService gameAddPlayerService,
     IGameStartService gameStartService,
-    IRuleService ruleService
+    IGameMoveService gameMoveService
     ) : IGameService
 {
     public Game GetGame(GameId gameId)
@@ -21,6 +20,6 @@ public class GameService(
     public Game StartGame(GameId gameId)
         => gameStartService.StartGame(gameId);
 
-    public Game MakeTurn(GameId gameId, PlayerId playerId, Move move)
-        => ruleService.ValidateTurn(gameId, playerId, move);
+    public Game MakeMove(Move move)
+        => gameMoveService.MakeMove(move);
 }

@@ -26,7 +26,10 @@ public class GameStartService(
         game.Stack = AssginRandomStack();
         game.PlayerCards = AssignCardsToPlayers(game);
 
-        game.GameState = GameState.Running;
+        game.GameState = GameState.WaitingForMove;
+
+        game.Turn = 1;
+        game.CurrentPlayer = game.Players.First();
 
         return game;
     }

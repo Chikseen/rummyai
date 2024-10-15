@@ -5,6 +5,9 @@
 bin/
 obj/
 
+# Models
+TraniedModels/
+
 # Logs
 logs
 *.log

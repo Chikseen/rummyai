@@ -5,6 +5,7 @@ namespace RummyAi.Domain.Features.GameDto.Models;
 
 public class Move
 {
-    public required Player Player { get; set; }
+    public required GameId GameId { get; set; }
+    public required PlayerId PlayerId { get; set; }
     public required List<Card> Cards { get; set; }
 }

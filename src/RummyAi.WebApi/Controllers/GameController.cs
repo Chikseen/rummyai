@@ -31,9 +31,7 @@ public class GameController(
         => Ok(gameService.StartGame(new(gameId)));
 
     [HttpPost()]
-    [Route(nameof(MakeTurn))]
-    [ServiceFilter(typeof(GameFilter))]
-    [ServiceFilter(typeof(PlayerFilter))]
-    public ActionResult<Game> MakeTurn(Guid gameId, Guid playerId, [FromBody] Move move)
-        => Ok(gameService.MakeTurn(gameId, playerId, move));
+    [Route(nameof(MakeMove))]
+    public ActionResult<Game> MakeMove(Move move)
+        => Ok(gameService.MakeMove(move));
 }

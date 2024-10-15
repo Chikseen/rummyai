@@ -22,7 +22,7 @@ public class RandomService(
 
     private Random GenerateRandom()
     {
-        bool isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
+        bool isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "_x_Development";
 
         if (isDevelopment)
             return new Random(Seed: options.Value.Seed);
