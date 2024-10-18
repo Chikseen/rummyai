@@ -33,7 +33,5 @@ public static class ServiceCollectionExtensions
     public static void AddFilter(this IServiceCollection services)
     {
         services.AddScoped<GameFilter>();
-        services.AddScoped<PlayerFilter>();
     }
-
 }

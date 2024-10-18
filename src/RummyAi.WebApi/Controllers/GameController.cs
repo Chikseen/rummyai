@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using RummyAi.Application.Contract.Features.GameContract;
+using RummyAi.Domain.Features.GameDto;
 using RummyAi.Domain.Features.GameDto.Models;
 using RummyAi.WebApi.ActionFilterAttributes;
 
@@ -17,12 +18,11 @@ public class GameController(
     public ActionResult<Game> GetGame(Guid? gameId)
         => Ok(gameService.GetGame(new(gameId)));
 
-    [HttpGet()]
+    [HttpPost()]
     [Route(nameof(AddPlayer))]
     [ServiceFilter(typeof(GameFilter))]
-    [ServiceFilter(typeof(PlayerFilter))]
-    public ActionResult<Game> AddPlayer(Guid gameId, Guid playerId)
-        => Ok(gameService.AddPlayer(new(gameId), new(playerId)));
+    public ActionResult<Game> AddPlayer(Guid gameId, PlayerId playerId)
+        => Ok(gameService.AddPlayer(new(gameId), playerId));
 
     [HttpGet()]
     [Route(nameof(StartGame))]
