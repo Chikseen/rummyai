@@ -9,6 +9,11 @@
 
 <script>
 export default {
+	setup() {
+		definePageMeta({
+			middleware: 'check-game-state'
+		})
+	},
 	data() {
 		return {
 			gameStore: useGameStore(),

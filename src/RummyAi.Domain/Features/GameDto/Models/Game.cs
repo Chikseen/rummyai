@@ -1,6 +1,7 @@
 ﻿using RummyAi.Domain.Features.DeckDto.Models;
 using RummyAi.Domain.Features.GameDto.Enum;
 using RummyAi.Domain.Features.PlayerDto.Model;
+using System.Text.Json;
 
 namespace RummyAi.Domain.Features.GameDto.Models;
 
@@ -40,5 +41,10 @@ public class Game
     public int GetNumberOfPlayers()
     {
         return Players.Count;
+    }
+
+    public override string ToString()
+    {
+        return JsonSerializer.Serialize(this);
     }
 }

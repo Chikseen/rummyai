@@ -8,12 +8,15 @@ export default {
 		})
 		return game;
 	},
-	async JoinGame(gameId: string, playerId: string): Promise<Game> {
+	async JoinGame(gameId: string, playerId: string, connectionId: string): Promise<Game> {
 		var config = useRuntimeConfig()
 		const game: Game = await $fetch(`${config.public.API_ENDPOINT_BASE}/Game/AddPlayer?gameId=${gameId}`, {
 			method: 'POST',
 			body: {
-				id: playerId
+				PlayerId: {
+					Id: playerId,
+				},
+				ConenctionId: connectionId
 			}
 		})
 		return game;

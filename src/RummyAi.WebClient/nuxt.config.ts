@@ -9,5 +9,6 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@pinia/nuxt']
+  modules: ['@pinia/nuxt'],
+  compatibilityDate: '2024-10-22'
 })

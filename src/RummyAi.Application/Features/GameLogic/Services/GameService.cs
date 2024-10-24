@@ -1,6 +1,7 @@
 ﻿using RummyAi.Application.Contract.Features.GameContract;
 using RummyAi.Domain.Features.GameDto;
 using RummyAi.Domain.Features.GameDto.Models;
+using RummyAi.Domain.Features.PlayerDto.Model;
 
 namespace RummyAi.Application.Features.GameLogic.Services;
 
@@ -14,8 +15,8 @@ public class GameService(
     public Game GetGame(GameId gameId)
         => gameGetService.GetGame(gameId);
 
-    public Game AddPlayer(GameId gameId, PlayerId playerId)
-        => gameAddPlayerService.AddPlayer(gameId, playerId);
+    public Game AddPlayer(GameId gameId, PlayerConnection playerConnection)
+        => gameAddPlayerService.AddPlayer(gameId, playerConnection);
 
     public Game StartGame(GameId gameId)
         => gameStartService.StartGame(gameId);

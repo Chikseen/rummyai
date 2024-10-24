@@ -1,10 +1,7 @@
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using RummyAi.WebApi.Extensions;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -13,18 +10,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
 builder.Services.AddFilter();
 builder.Services.AddOption();
+builder.Services.AddSignalR();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:3000",
-                                "http://www.contoso.com")
-            .AllowAnyMethod()
-            .AllowAnyHeader();
-        });
-});
+builder.Services.AddCorsSettings();
 
 WebApplication app = builder.Build();
 
@@ -35,7 +23,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(MyAllowSpecificOrigins);
+app.UseCors("CorsOptions");
+
+app.AddHubs();
 
 app.UseHttpsRedirection();
 

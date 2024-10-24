@@ -1,9 +1,11 @@
 ﻿using RummyAi.Application.Contract.Features.BoardContract;
 using RummyAi.Application.Contract.Features.GameContract;
+using RummyAi.Application.Contract.Features.HubIntegrationLogic;
 using RummyAi.Application.Contract.Features.RandomContract;
 using RummyAi.Application.Contract.Features.RuleLogic;
 using RummyAi.Application.Features.BoardLogic.Services;
 using RummyAi.Application.Features.GameLogic.Services;
+using RummyAi.Application.Features.HubIntegrationLogic;
 using RummyAi.Application.Features.RandomLogic.Services;
 using RummyAi.Application.Features.RuleLogic;
 using RummyAi.WebApi.ActionFilterAttributes;
@@ -28,6 +30,9 @@ public static class ServiceCollectionExtensions
 
         // Rules
         services.AddScoped<IRuleService, RuleService>();
+
+        // Hub Integration
+        services.AddScoped<IHubIntegrationService, HubIntegrationService>();
     }
 
     public static void AddFilter(this IServiceCollection services)

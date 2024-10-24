@@ -21,4 +21,8 @@
     <ProjectReference Include="..\RummyAi.Domain\RummyAi.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Hubs\" />
+  </ItemGroup>
+
 </Project>

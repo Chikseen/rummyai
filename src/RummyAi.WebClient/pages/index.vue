@@ -2,8 +2,8 @@
 	<div>
 		<h1>Rummy AI</h1>
 		<input type="text" v-model="gameId">
-		<button @click="getGame">Join Game</button>
-		<div v-if="gameStore.game != null">
+		<button v-if="!gameStore.game.gameId" @click="getGame">Get Game Data</button>
+		<div v-if="gameStore.game.gameId">
 			<p>{{ gameStore.game }}</p>
 			<button @click="joinGame">Join Game</button>
 		</div>
@@ -12,12 +12,14 @@
 
 <script lang="ts">
 import { useGameStore } from '@/stores/gameStore'
+import { useConnectionStore } from '~/stores/connectionStore';
 
 export default {
 	data() {
 		return {
 			gameId: "",
 			gameStore: useGameStore(),
+			connectionStore: useConnectionStore()
 		}
 	},
 	methods: {
@@ -32,7 +34,7 @@ export default {
 		},
 		async joinGame() {
 			const playerId = this.uuidv4();
-			this.gameStore.joinGame(playerId);
+			await this.gameStore.joinGame(playerId, this.connectionStore.getConnectionId);
 			this.$router.push({ name: 'waiting' });
 		},
 	}
