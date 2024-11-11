@@ -28,6 +28,6 @@ export async function initHub() {
 	connectionStore.$state.connection = connection;
 
 	connection.on("SendNewGameStateToGameId", (game: Game,) => {
-		gameStore.$state.game = game;
+		gameStore.setGame(game);
 	});
 }

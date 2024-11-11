@@ -8,6 +8,19 @@ export default defineNuxtConfig({
       API_ENDPOINT_BASE: process.env.API_ENDPOINT_BASE,
     },
   },
+  
+  vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					api: 'modern-compiler',
+					additionalData: `
+						@use "@/assets/styles/global.scss";
+						`
+				},
+			},
+		},
+	},
 
   modules: ['@pinia/nuxt'],
   compatibilityDate: '2024-10-22'

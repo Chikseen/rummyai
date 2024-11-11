@@ -9,7 +9,8 @@ public class Game
 {
     public GameId GameId { get; init; }
     public GameState GameState { get; set; }
-    public Stack Stack { get; set; }
+    public Stack HiddenStack { get; set; }
+    public List<Stack> OpenStack { get; set; }
     public int Turn { get; set; }
     public List<Player> Players { get; set; }
     public Player? CurrentPlayer { get; set; }
@@ -22,7 +23,8 @@ public class Game
         GameState = GameState.Init;
         Turn = 0;
         Players = [];
-        Stack = new();
+        HiddenStack = new();
+        OpenStack = new();
         PlayerCards = [];
         Created = DateTime.UtcNow;
     }
@@ -33,7 +35,8 @@ public class Game
         GameState = GameState.Init;
         Turn = 0;
         Players = [];
-        Stack = new();
+        HiddenStack = new();
+        OpenStack = new();
         PlayerCards = [];
         Created = DateTime.UtcNow;
     }

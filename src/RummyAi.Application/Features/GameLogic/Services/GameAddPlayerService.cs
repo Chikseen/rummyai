@@ -17,14 +17,16 @@ public class GameAddPlayerService(
     {
         Game game = gameStateService.GetGame(gameId);
 
-        game.GameState = GameState.PlayerSearch;
+        if (game.GameState <= GameState.PlayerSearch)
+        {
+            game.GameState = GameState.PlayerSearch;
 
-        Player player = new(playerConnection.PlayerId, PlayerType.Human);
+            Player player = new(playerConnection.PlayerId, PlayerType.Human);
 
-        game.Players.Add(player);
+            game.Players.Add(player);
+        }
 
         hubIntegrationService.AddPlayerToGroup(game, playerConnection);
-        hubIntegrationService.SendNewGameStatusToGroup(game);
 
         return game;
     }

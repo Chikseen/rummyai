@@ -23,7 +23,7 @@ public class GameStartService(
         Game game = gameGetService.GetGame(gameId);
 
         game.Players.AddRange(AddMissingPlayer(game));
-        game.Stack = AssginRandomStack();
+        game.HiddenStack = AssginRandomStack();
         game.PlayerCards = AssignCardsToPlayers(game);
 
         game.GameState = GameState.WaitingForMove;
@@ -65,8 +65,8 @@ public class GameStartService(
         {
             PlayerId playerId = player.PlayerId;
 
-            List<Card> cards = game.Stack.Cards.Take(amountOfCardsPerPlayer).ToList();
-            game.Stack.Cards.RemoveRange(0, amountOfCardsPerPlayer);
+            List<Card> cards = game.HiddenStack.Cards.Take(amountOfCardsPerPlayer).ToList();
+            game.HiddenStack.Cards.RemoveRange(0, amountOfCardsPerPlayer);
             Stack stack = new(cards);
 
             players.Add(new(playerId, stack));
@@ -79,7 +79,7 @@ public class GameStartService(
     {
         int amountOfCardsPerPlayer = options.Value.InitNumberOfCardsPerPlayer;
         int totalCardsNeeded = game.Players.Count * amountOfCardsPerPlayer;
-        int differeneceInCards = game.Stack.Cards.Count - totalCardsNeeded;
+        int differeneceInCards = game.HiddenStack.Cards.Count - totalCardsNeeded;
 
         return differeneceInCards > 0;
     }

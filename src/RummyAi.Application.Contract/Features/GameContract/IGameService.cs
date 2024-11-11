@@ -9,5 +9,5 @@ public interface IGameService
     Game GetGame(GameId gameId);
     Game AddPlayer(GameId gameId, PlayerConnection playerConnection);
     Game StartGame(GameId gameId);
-    Game MakeMove(Move move);
+    MoveResult MakeMove(Move move);
 }

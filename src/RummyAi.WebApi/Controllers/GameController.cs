@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using RummyAi.Application.Contract.Features.GameContract;
-using RummyAi.Domain.Features.GameDto;
 using RummyAi.Domain.Features.GameDto.Models;
 using RummyAi.Domain.Features.PlayerDto.Model;
 using RummyAi.WebApi.ActionFilterAttributes;

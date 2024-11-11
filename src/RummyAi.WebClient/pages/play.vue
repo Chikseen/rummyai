@@ -1,21 +1,13 @@
 <template>
-	<div>
-		<p>{{ gameStore.game }}</p>
-		<button @click="$router.push('/')">HOME</button>
-	</div>
+	<gameboard />
 </template>
 
-<script>
+<script lang="ts">
 export default {
 	setup() {
 		definePageMeta({
 			middleware: 'check-game-state'
 		})
 	},
-	data() {
-		return {
-			gameStore: useGameStore(),
-		}
-	}
 }
 </script>

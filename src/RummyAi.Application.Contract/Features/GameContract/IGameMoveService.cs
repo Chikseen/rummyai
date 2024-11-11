@@ -3,5 +3,5 @@
 namespace RummyAi.Application.Contract.Features.GameContract;
 public interface IGameMoveService
 {
-    Game MakeMove(Move move);
+    MoveResult MakeMove(Move move);
 }

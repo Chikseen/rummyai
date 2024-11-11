@@ -1,4 +1,5 @@
 import { Game } from "~/domain/models/Game"
+import type { Move, MoveResult } from "~/domain/models/Move";
 
 export default {
 	async GetGame(gameId: string): Promise<Game> {
@@ -27,5 +28,13 @@ export default {
 			method: 'GET'
 		})
 		return game;
+	},
+	async SubmitMove(move: Move): Promise<MoveResult> {
+		var config = useRuntimeConfig()
+		const moveResult: MoveResult = await $fetch(`${config.public.API_ENDPOINT_BASE}/Game/MakeMove`, {
+			method: 'POST',
+			body: move
+		})
+		return moveResult;
 	},
 }

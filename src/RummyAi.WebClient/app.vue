@@ -8,8 +8,14 @@
 import { initHub } from '~/services/hubs/gameHub';
 
 export default {
+  data() {
+    return {
+      gameStore: useGameStore(),
+    }
+  },
   async mounted() {
     await initHub();
+    this.gameStore.setPlayerId();
   },
 }
 </script>

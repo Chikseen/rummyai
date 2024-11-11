@@ -2,6 +2,7 @@
 using Microsoft.ML;
 using RummyAi.Application.Contract.Features.GameContract;
 using RummyAi.Domain.Features.CardDto.Enum;
+using RummyAi.Domain.Features.DeckDto.Models;
 using RummyAi.Domain.Features.GameDto.Models;
 using RummyAi.Domain.MachineLearning;
 
@@ -26,18 +27,23 @@ public class DebugController(
             List<Card> moveCards = startedGame.PlayerCards
                 .Where(player => player.PlayerId == startedGame.CurrentPlayer!.PlayerId)
                 .First()
-                .Cards.Cards
+                .Stack.Cards
                 .Take(2)
                 .ToList();
+
+            Stack cards = new()
+            {
+                Cards = moveCards
+            };
 
             Move move = new()
             {
                 GameId = startedGame.GameId,
                 PlayerId = startedGame.CurrentPlayer!.PlayerId,
-                Cards = moveCards
+                Stack = cards
             };
 
-            Game movedGame = gameService.MakeMove(move);
+            MoveResult movedGame = gameService.MakeMove(move);
         }
     }
 

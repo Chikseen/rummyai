@@ -16,7 +16,7 @@ public class RuleService() : IRuleService
         // Super Simple Ruleset to create data for first AiModel
         bool isSuitValid = ValidateSameSuit(move, game);
 
-        StoreInCsvFile(move.Cards, isSuitValid);
+        StoreInCsvFile(move.Stack.Cards, isSuitValid);
 
         return isSuitValid;
     }
@@ -28,7 +28,7 @@ public class RuleService() : IRuleService
 
     private bool ValidateSameSuit(Move move, Game game)
     {
-        List<IGrouping<Suits, Card>> sortedCards = move.Cards
+        List<IGrouping<Suits, Card>> sortedCards = move.Stack.Cards
             .GroupBy(c => c.Suit)
             .ToList();
 
